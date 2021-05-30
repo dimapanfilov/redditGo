@@ -7,4 +7,4 @@ adminer:
 
 migrate:
 	migrate -source file://migrations \ 
-	-database postgres://postgres:dima@locakhost/postgres?sslmode=disable up
+			-database postgres://postgres:dima@locakhost/postgres?sslmode=disable up
