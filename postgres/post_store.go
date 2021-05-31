@@ -8,12 +8,6 @@ import (
 	"github.com/jmoiron/sqlx"
 )
 
-func NewPostStore(db *sqlx.DB) *PostStore {
-	return &PostStore{
-		DB: db,
-	}
-}
-
 type PostStore struct {
 	*sqlx.DB
 }
@@ -47,7 +41,7 @@ func (s *PostStore) CreatePost(p *redditgo.Post) error {
 }
 
 func (s *PostStore) UpdatePost(p *redditgo.Post) error {
-	if err := s.Get(p, `UPDATE posts SET title = $1, description = $2 WHERE id = $3 RETURNING *`,
+	if err := s.Get(p, `UPDATE posts SET thread_id = $1, title = $2, content = $3, votes = $4 WHERE id = $5 RETURNING *`,
 		p.ThreadID,
 		p.Title,
 		p.Content,
