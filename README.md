@@ -17,4 +17,4 @@ Now, run ```make migrate``` to create all the tables.
 
 Finally, running ```go run cmd/redditgo/main.go``` will permit you to access localhost:3000/threads 
 
-To create threads go to where the tables are created, go to threads, and add a new one using a random uuid generator online. 
+To create or remove threads, follow the buttons provided on the `/threads` endpoint. 
