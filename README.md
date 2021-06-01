@@ -15,6 +15,6 @@ docker inspect /* address of postgres container*/
 Using the obtained IP, log in.
 Now, run ```make migrate``` to create all the tables.
 
-Finally, running ```go run cmd/redditgo/main.go``` will permit you to access localhost:3000/threads 
+Finally, running ```go run cmd/redditgo/main.go``` will permit you to access `localhost:3000/threads`
 
 To create or remove threads, follow the buttons provided on the `/threads` endpoint. 
